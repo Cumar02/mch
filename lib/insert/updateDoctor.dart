@@ -19,33 +19,34 @@ class _updatedoctorState extends State<updatedoctor> {
   TextEditingController emailcontroller= TextEditingController();
   TextEditingController spatializedcontroller= TextEditingController();
 
-  Future<void> Updaterecord(var name,var phone,var email , var spatialized)async
-  {
-    var res= await http.get(Uri.parse("http://10.0.2.2/motherApi/UpDoctor.php?Name=$name &Phone=$phone &Email=$email &Spatialized=$spatialized"));
-    spatializedcontroller.text=="";
-    emailcontroller.text=="";
-    phonecontroller.text=="";
-    namecontroller.text=="";
-    if(res.body=="yes")
-    {
-
-
-      ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("SAVED SUCCESSFULLY ✅",style: TextStyle(
-            decoration: TextDecoration.underline,
-            fontSize: 18,
-
-          ),)));
-
-
-    }
-    else{
-      ScaffoldMessenger.of(context as BuildContext).showSnackBar(
-          SnackBar(content: Text("register failled")));
-
-    }
-
-  }
+  // Future<void> Updaterecord(var name,var phone,var email , var spatialized)async
+  // {
+  //   var res= await http.get(Uri.parse("http://10.0.2.2/motherApi/UpDoctor.php?Name=$name &Phone=$phone &Email=$email &Spatialized=$spatialized"));
+  //   spatializedcontroller.text=="";
+  //   emailcontroller.text=="";
+  //   phonecontroller.text=="";
+  //   namecontroller.text=="";
+  //   if(res.body=="yes")
+  //   {
+  //
+  //
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //         SnackBar(content: Text("SAVED SUCCESSFULLY ✅",style: TextStyle(
+  //           decoration: TextDecoration.underline,
+  //           fontSize: 18,
+  //
+  //         ),)));
+  //
+  //
+  //   }
+  //   else{
+  //     ScaffoldMessenger.of(context as BuildContext).showSnackBar(
+  //         SnackBar(content: Text("register failled")));
+  //
+  //   }
+  //
+  // }
+  
 
   @override
   void initState() {
